@@ -11,6 +11,9 @@ def convert_currency(amount, base_currency, target_currency):
         print("Erreur : Le montant ne peut pas être négatif.")
         return None
 
+    if base_currency not in ["USD", "EUR", "CHF"] or target_currency not in ["USD", "EUR", "CHF"]:
+        return None  # Devise inconnue
+
     rate = exchange_rates.get((base_currency, target_currency))
     if rate:
         return round(amount * rate, 2)
