@@ -1,6 +1,8 @@
 # Dictionnaire des taux fixes
 exchange_rates = {
-    ("USD", "EUR"): 0.92
+    ("USD", "EUR"): 0.92,
+    ("EUR", "CHF"): 0.95,
+    ("CHF", "USD"): 1.10
 }
 
 def convert_currency(amount, base_currency, target_currency):
