@@ -5,19 +5,24 @@ exchange_rates = {
     ("CHF", "USD"): 1.10
 }
 
+valid_currencies = {"USD", "EUR", "CHF"}
+
 def convert_currency(amount, base_currency, target_currency):
     """ Convertit un montant entre deux devises selon un taux de change fixe. """
     if amount < 0:
         print("Erreur : Le montant ne peut pas être négatif.")
         return None
 
-    if base_currency not in ["USD", "EUR", "CHF"] or target_currency not in ["USD", "EUR", "CHF"]:
-        return None  # Devise inconnue
+    if base_currency not in valid_currencies or target_currency not in valid_currencies:
+        print("Erreur : Devise inconnue. Devise disponibles : USD, EUR, CHF.")
+        return None
 
     rate = exchange_rates.get((base_currency, target_currency))
-    if rate:
-        return round(amount * rate, 2)
-    return None
+    if not rate:
+        return None
+
+    return round(amount * rate, 2)
+
 
 
 def main():
