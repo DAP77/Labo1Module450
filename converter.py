@@ -7,9 +7,12 @@ exchange_rates = {
 
 def convert_currency(amount, base_currency, target_currency):
     """ Convertit un montant entre deux devises selon un taux de change fixe. """
+    if amount < 0:
+        return None  # Gestion des montants invalides
+
     rate = exchange_rates.get((base_currency, target_currency))
     if rate:
-        return round(amount * rate, 2)  # Arrondi à 2 décimales
+        return round(amount * rate, 2)
     return None
 
 
