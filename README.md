@@ -30,3 +30,11 @@ En tant qu’utilisateur, je veux entrer un montant et une devise source, choisi
 
 3. Installer les dépendances :
     pip install -r requirements.txt
+
+## 🏃‍♂️ Exécution de l'application
+
+Une fois l'installation terminée, vous pouvez exécuter l'application en utilisant la commande suivante :
+   python3 converter.py
+
+Voici la commande pour executé le test unitaire:
+python3 -m unittest discover tests/
