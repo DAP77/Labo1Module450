@@ -10,6 +10,11 @@ class TestCurrencyConverter(unittest.TestCase):
     def test_invalid_amount(self):
         """Test de rejet des montants négatifs"""
         self.assertIsNone(convert_currency(-5, "USD", "EUR"))
+    
+    def test_unknown_currency(self):
+        """Test de rejet des devises inconnues"""
+        self.assertIsNone(convert_currency(10, "ABC", "EUR"))
+
 
 
 if __name__ == "__main__":
