@@ -1,0 +1,2 @@
+# Dépendances nécessaires pour exécuter l'application
+pytest  # Pour les tests unitaires
