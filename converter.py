@@ -1,22 +1,15 @@
 # Dictionnaire des taux fixes
 exchange_rates = {
-    ("USD", "EUR"): 0.92,
-    ("EUR", "CHF"): 0.95,
-    ("CHF", "USD"): 1.10,
-    ("EUR", "USD"): 1.09,
-    ("USD", "CHF"): 0.88,
-    ("CHF", "EUR"): 1.07
+    ("USD", "EUR"): 0.92
 }
 
 def convert_currency(amount, base_currency, target_currency):
     """ Convertit un montant entre deux devises selon un taux de change fixe. """
-    if amount < 0:
-        return None  # Gestion des montants invalides
-
     rate = exchange_rates.get((base_currency, target_currency))
     if rate:
         return round(amount * rate, 2)  # Arrondi à 2 décimales
-    return None  # Si la conversion n'est pas possible
+    return None
+
 
 def main():
     print("Bienvenue dans le convertisseur de devises!")
