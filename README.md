@@ -1,5 +1,6 @@
-(https://github.com/OWNER/REPOSITORY/actions/workflows/WORKFLOW-FILE/badge.svg)
 # Labo1Module450
+![Statut du build](https://github.com/DAP77/Labo1Module450/actions/workflows/python-app.yml/badge.svg)
+
 # 💰 Convertisseur de Devises 
 
 ## 📌 Objectifs de l'application
